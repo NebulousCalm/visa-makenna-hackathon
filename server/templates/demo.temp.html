@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <script defer src="{{ url_for('static', filename='theme_toggle.js')}}"></script>
+    <script src="https://kit.fontawesome.com/48e723b064.js" crossorigin="anonymous"></script>
+</head >
+<body>
+<br />
+<br />
+<br />
+<!-- added above for sample spacing to make page look better -->
+    <div class="text-container">
+        <h1>Temp File showing off Simple Styles</h1>
+        <p>Isn't this just radical</p>
+    </div>
+    <table class="text-container">
+      <tr>
+            <td>Row 1</td>
+            <td>Row 1 but a different column</td>
+      </tr>
+      <tr>
+          <td>Row 2</td>
+         <td>Row 2 but it's a different column</td>
+      </tr>
+      <tr>
+          <td>Row 23</td>
+          <td>Row 3, but shockingly it's a different column</td>
+      </tr>
+      <tr>
+            <td>Question</td>
+            <td>Any <strong>Questions?</strong></td>
+      </tr>
+    </table>
+
+    <div class="text-container">
+      <h1>Lorem Ipsum</h1>
+      <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed do eiusmod tempor incididunt</li>
+          <li>Ut labore et dolore magna aliqua</li>
+      </ul>
+
+      <h1>Lorem Ipsum v2.0</h1>
+      <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed do eiusmod tempor incididunt</li>
+          <li>Ut labore et dolore magna aliqua</li>
+      </ul>
+    </div>
+    <button type="button" data-theme-toggle class="fa-regular fa-sun"></button>
+</body>
+</html>
