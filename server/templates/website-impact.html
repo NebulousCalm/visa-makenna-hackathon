@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Impact</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <script defer src="{{ url_for('static', filename='theme_toggle.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='utils.js')}}"></script>
+    <script src="https://kit.fontawesome.com/48e723b064.js" crossorigin="anonymous"></script>
+
+    <style>
+
+    </style>
+</head >
+<body>
+    <div class="top-container">
+        <span id="back_arrow" class="fa-solid fa-arrow-left-long"></span> <!-- back arrow -->
+        <button type="button" data-theme-toggle class="fa-regular fa-sun theme-toggle"></button>
+    </div>
+
+    <div class="text-container">
+        <h1 class="center">Our Impact</h1>
+    </div>
+    <br />    <br />
+    <br />    <br />
+
+        <table class="text-container">
+            <tr>
+                <td>Rating</td>
+                <td>{{ impact['rating'] }}, level efficient</td>
+            </tr>
+            <tr>
+                <td>Impact per page load</td>
+                <td>{{ impact['carbon-grams'][:5] }} grams of carbon </td>
+            </tr>
+            <tr>
+                <td>Cleaner Than</td>
+                <td>{{ impact['cleanerThan'] }}% of websites</td>
+            </tr>
+        </table>
+</body>
+</html>

@@ -50,7 +50,7 @@ const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
 /**
-* 3. Update the theme setting and button text accoridng to current settings
+* 3. Update the theme setting and button text according to current settings
 */
 updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
 updateThemeOnHtmlEl({ theme: currentThemeSetting });

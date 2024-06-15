@@ -50,6 +50,13 @@ body{
         font-family: 'DM Sans', sans-serif;
     }
 
+    & h1.center{
+        text-align: center;
+        color: var(--p-text-color);
+        font-weight: 400;
+        font-size: 64px;
+    }
+
     & p{
         border-left: 1px solid #E74C3C;
         padding-left: 5px;
@@ -119,4 +126,28 @@ hr{
     font-family: 'Poppins', sans-serif;
     color: var(--light-gray);
     font-size: 16px;
+}
+
+.top-container{
+    width: 100vw;
+    & #back_arrow, & .theme-toggle{
+        position: absolute;
+        display: inline-block;
+        color: var(--p-text-color);
+        top: 0;
+        cursor: pointer;
+        margin: 30px;
+    }
+
+    & #back_arrow{
+        left: 0;
+    }
+
+    & .theme-toggle{
+        right: 0;
+        background-color: var(--body-bg);
+        border: none;
+        outline: none;
+        font-size: 18px;
+    }
 }
