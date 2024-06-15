@@ -3,7 +3,15 @@
 `Dependencies`
 
 ```shell
-pip install flask
+pip install flask requests
+```
+
+`Run Web Server Locally`
+
+```shell
+cd ./server
+python3 db_utils.py # create database
+python3 server.py # runs server
 ```
 
 # Notes while developing
