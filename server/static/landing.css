@@ -1,0 +1,39 @@
+.main-container{
+    text-align: center;
+    margin: 30vh auto 20vh auto;
+}
+
+#tagline{
+    color: var(--btn-color);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+#headline{
+    color: var(--p-text-color);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 72px;
+}
+
+#featurelist{
+    font-family: 'DM Sans', sans-serif;
+    color: var(--p-text-color);
+    font-size: 55px
+}
+
+#explanation{
+    width: 600px;
+    margin: 15px auto 50px auto;
+    color: var(--off-gray);
+    font-family: 'Reddit Mono', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+.getstarted-btn:hover{
+    cursor: pointer;
+    filter: hue-rotate(-10deg);
+}

@@ -7,7 +7,7 @@ def setup(db_name):
     # THIS FILE WILL EXECUTE THIS FUNCTION WHEN RUN
     print(f'creating database {db_name}...')
 
-    try:  # creating file time
+    try:  # it's creating file time
         if not os.path.exists(db_name + '.db'):
             with open(db_name + '.db', "w") as f:
                 pass

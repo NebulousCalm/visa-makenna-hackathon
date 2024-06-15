@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+
+    <script src="{{ url_for('static', filename='landing.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css' ) }}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <script defer src="{{ url_for('static', filename='theme_toggle.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='utils.js')}}"></script>
+
+    <script src="https://kit.fontawesome.com/48e723b064.js" crossorigin="anonymous"></script>
+
     <title>Visa + Makenna</title>
 </head>
 <body>
-    Hello World
+    <div class="top-container">
+        <button type="button" data-theme-toggle class="fa-regular fa-sun theme-toggle"></button>
+    </div>
+    <div class="main-container">
+        <h3 id="tagline">This is the only home we have</h3>
+
+        <h1 id="headline">So together, let's save it.</h1>
+        <h3 id="featurelist">Become a <span>
+        <span class="typewrite" data-period="2000" data-type='["sustainable shopper", "eco-friendly store", "waste reducer", "green advocate", "conscious consumer", "responsible retailer"]'>
+                <span class="wrap"></span>
+            </span>
+        </span></h3>
+
+        <p id="explanation">The environment is no one’s property to destroy. It’s everyone’s responsibility to protect.</p>
+        <a href="#" class="filled-btn">Get Started <i class="fa-solid fa-arrow-right right-arrow"></i></a>
+    </div>
 </body>
 </html>
