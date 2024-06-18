@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* This aligns items vertically to the center by default */
+}
+
+#breadcrumbs{
+    padding-bottom: 16px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--p-text-color);
+    font-size: 14px;
+}
+
+#breadcrumbs a{
+    padding: 0 2px;
+    color: inherit;
+    text-decoration: none;
+}
+
+#breadcrumbs t{
+    color: var(--off-gray);
+    font-weight: 900;
+    margin-left: 2px;
+}
+
+.prod-img{
+    width: 30vw;
+    height: 65vh;
+    background-position: 100% 100%;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+.prod-info-container{
+    width: 50vw;
+    height: 65vh;
+    text-align: left;
+
+    & p.desc{
+       font-family: 'Poppins', sans-serif;
+        color: var(--off-gray);
+        font-size: 12px;
+        width: 80%;
+        margin-top: 0.67em; /* keep spacing even between h1 stars and desc */
+    }
+
+    & #checkout{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 18px;
+        font-family: 'Reddit Mono', sans-serif;
+        background-color: var(--btn-color);
+        padding: 8px 64px;
+        border: none;
+        outline: none;
+        border-radius: 0.4rem;
+        & i{
+            margin-left: 20px;
+        }
+    }
+}
+
+.prod-info-container .title{
+    text-align: left;
+    letter-spacing: 3px;
+    font-size: 42px;
+}
+
+.star-container{
+    & i{
+        color: #fff220;
+        font-size: 14px;
+        padding: 2px;
+    }
+}
+
+.price{
+    color: var(--p-text-color);
+    padding: 64px 0;
+    font-size: 54px;
+    font-family: 'Major Mono Display', monospace;
+    margin: 0;
+    & span{
+        font-size: 16px;
+
+        vertical-align: top;
+    }
+}

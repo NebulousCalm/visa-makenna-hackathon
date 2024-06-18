@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+
+    <script src="{{ url_for('static', filename='ecommerce.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ecommerce.css' ) }}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <script defer src="{{ url_for('static', filename='theme_toggle.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='utils.js')}}"></script>
+
+    <script src="https://kit.fontawesome.com/48e723b064.js" crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="top-container">
+        <button type="button" data-theme-toggle class="fa-regular fa-sun theme-toggle"></button>
+    </div>
+    <div class="container">
+        <div class="img-container">
+            <p id="breadcrumbs">
+                <a href="#">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">Fresh Fruits & Vegetables</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">Fresh Fruit</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <t href="#">Fresh Banana</t> <!-- demo `t` tag -->
+            </p>
+            <img src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="product image" class="prod-img" />
+        </div>
+
+        <div class="prod-info-container">
+            <h1 class="title">Fresh Banana</h1>
+
+            <div class="star-container">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="desc">Fresh and delicious, our bananas are the perfect snack or addition to your favorite recipes. These naturally sweet and nutritious fruits are rich in potassium, vitamins, and fiber, providing a quick energy boost anytime.</p>
+
+            <h1 class="price">$0.70 <span>each</span></h1>
+
+            <button id="checkout">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </div>
+</body>
+</html>

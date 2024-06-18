@@ -40,24 +40,24 @@ body{
 }
 
 /* TEXT FORMATTING SHI */
-.text-container{
+.text-container {
     font-family: 'Reddit Mono', sans-serif;
     width: 50vw;
     margin-left: 25vw;
 
-    & h1{
+    & h1 {
         color: #E74C3C;
         font-family: 'DM Sans', sans-serif;
     }
 
-    & h1.center{
+    & h1.center {
         text-align: center;
         color: var(--p-text-color);
         font-weight: 400;
         font-size: 64px;
     }
 
-    & p{
+    & p {
         border-left: 1px solid #E74C3C;
         padding-left: 5px;
         font-family: 'Poppins', sans-serif;
@@ -65,17 +65,55 @@ body{
         margin: 7px 0;
     }
 
-    & a{
+    & a {
         color: dodgerblue;
         text-decoration: none;
     }
 
-    & ul{
-        & li{
+    & ul {
+        & li {
             margin-bottom: 10px;
             margin-left: 30px;
             color: var(--p-text-color);
         }
+    }
+
+    & h5 {
+        width: 100vw;
+        text-align: center;
+        transform: translateX(-25vw);
+        font-size: 32px;
+        color: var(--light-gray);
+        font-weight: 500;
+        display: inline-block;
+
+        & hr {
+            width: 20px;
+            margin: 0 5px 0 0;
+            display: inline-block;
+            border: 1px solid #E74C3C;
+            bottom: 0;
+        }
+    }
+}
+
+.duo-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--p-text-color);
+
+    & .left, & .right{
+        width: 40vw;
+    }
+
+    & .left > svg{
+        width: 20vw;
+        margin-left: 10vw;
+        height: 40vh;
+        padding: 0;
+        border-left: 1px solid #fff;
     }
 }
 
@@ -161,4 +199,9 @@ hr{
     background-color: var(--btn-color);
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+}
+
+.filled-btn:hover{
+    cursor: pointer;
+    filter: hue-rotate(-10deg);
 }

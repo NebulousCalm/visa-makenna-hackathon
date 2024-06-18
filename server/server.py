@@ -21,5 +21,10 @@ def temp_demo():
     return render_template('demo.temp.html')
 
 
+@app.route('/demo/product-page')
+def demo_product_page():
+    return render_template('product-page-demo.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
