@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+import sqlite3
 from utils import get_site_impact
 
 app = Flask(__name__)
@@ -23,7 +23,15 @@ def temp_demo():
 
 @app.route('/demo/product-page')
 def demo_product_page():
-    return render_template('product-page-demo.html')
+    con = sqlite3.connect("VISA.db")
+    con.row_factory = sqlite3.Row
+
+    cur = con.cursor()
+    cur.execute("SELECT * FROM products WHERE prodid='BAN101'")
+
+    rows = cur.fetchall()
+    con.close()
+    return render_template('product-page-demo.html',rows=rows)
 
 
 if __name__ == "__main__":

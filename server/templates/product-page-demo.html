@@ -33,20 +33,23 @@
         </div>
 
         <div class="prod-info-container">
-            <h1 class="title">Fresh Banana</h1>
+            {% for row in rows %}
+            <h1 class="title">{{ row["name"] }}</h1>
 
             <div class="star-container">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                {% for i in range(1, 6) %}
+                    {% if i <= row["rating"] %}
+                        <i class="fa-solid fa-star"></i>
+                    {% else %}
+                        <i class="fa-solid fa-star-empty"></i>
+                    {% endif %}
+                {% endfor %}
             </div>
 
-            <p class="desc">Fresh and delicious, our bananas are the perfect snack or addition to your favorite recipes. These naturally sweet and nutritious fruits are rich in potassium, vitamins, and fiber, providing a quick energy boost anytime.</p>
+            <p class="desc">{{ row["desc"]}}</p>
 
-            <h1 class="price">$0.70 <span>each</span></h1>
-
+            <h1 class="price">${{ row["price"] }} <span>{{ row["quantity"] }}</span></h1>
+            {% endfor %}
             <button id="checkout">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
         </div>
     </div>
