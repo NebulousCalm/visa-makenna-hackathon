@@ -9,8 +9,8 @@ const text_type = function(el, toRotate, period) {
 };
 
 text_type.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    const i = this.loopNum % this.toRotate.length;
+    const fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -20,8 +20,8 @@ text_type.prototype.tick = function() {
 
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-    var that = this;
-    var delta = 150 - Math.random() * 100;
+    const that = this;
+    let delta = 150 - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -53,3 +53,15 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector(".info-toggle");
+const closeButton = document.querySelector("dialog button");
+
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});

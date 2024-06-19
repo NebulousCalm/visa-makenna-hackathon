@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.main-container{
+    text-align: center;
+    margin: 30vh auto 20vh auto;
+}
+
+#tagline{
+    color: var(--btn-color);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+#headline{
+    color: var(--p-text-color);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 72px;
+}
+
+#featurelist{
+    font-family: 'DM Sans', sans-serif;
+    color: var(--p-text-color);
+    font-size: 55px
+}
+
+#explanation{
+    width: 600px;
+    margin: 15px auto 50px auto;
+    color: var(--off-gray);
+    font-family: 'Reddit Mono', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+/* --- stats bar --- */
+.stats-container hr{
+    width: 1px; /* Vertical line width */
+    height: 100px; /* Full height of the parent container */
+    border: none; /* Remove the default horizontal line */
+    border-left: solid 1px #fff; /* Left border as the vertical line */
+    margin: 0 16px; /* Adjust the spacing around the line */
+}
+
+.stats-container{
+  margin: 20vh 0 20vh 5vw;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(90vw - 32px);
+  border-radius: 0.5rem;
+  background-color: #252627;
+
+  .stats-text{
+    font-size: 72px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+
+    .color{
+      margin-left: -10px;
+      color: #E74C3C;
+    }
+
+    .desc{
+      position: relative;
+      font-size: 20px;
+      color: #4d4f51;
+      font-weight: 300;
+    }
+  }
+}
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    #000,
+    #000
+  );
+  opacity: 0.75;
+}
+
+dialog{ /* dialogue shenanigans */
+    background-color: var(--card-bg);
+    color: var(--p-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--p-text-color);
+    padding: 16px;
+    border-radius: 0.4rem;
+
+    & #modal-close{
+        margin-bottom: 20px;
+        background-color: var(--card-bg);
+        color: var(--p-text-color);
+        font-family: 'Major Mono Display', sans-serif;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 800;
+    }
+}

@@ -16,22 +16,21 @@ def get_website_impact():
     return render_template('website-impact.html', impact=impact)
 
 
-@app.route('/temp/demo')
-def temp_demo():
-    return render_template('demo.temp.html')
-
-
-@app.route('/demo/product-page')
-def demo_product_page():
+@app.route('/demo/product-page/:product')
+def demo_product_page(product):
+    product = product.lower()  # dynamic product render?
     con = sqlite3.connect("VISA.db")
     con.row_factory = sqlite3.Row
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM products WHERE prodid='BAN101'")
+    cur.execute("SELECT * FROM products WHERE prodid='BAN101'")  # maybe product var go here?? - Zach
 
     rows = cur.fetchall()
     con.close()
-    return render_template('product-page-demo.html',rows=rows)
+    return render_template(
+        'product-page-demo.html',
+        rows=rows
+    )
 
 
 if __name__ == "__main__":

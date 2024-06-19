@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/globals.css') }}" />
 
-    <script src="{{ url_for('static', filename='landing.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css' ) }}" />
+    <script defer src="{{ url_for('static', filename='js/landing.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css' ) }}" />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}" />
-    <script defer src="{{ url_for('static', filename='theme_toggle.js')}}"></script>
-    <script defer src="{{ url_for('static', filename='utils.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='js/theme_toggle.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='js/utils.js')}}"></script>
 
     <script src="https://kit.fontawesome.com/48e723b064.js" crossorigin="anonymous"></script>
 
@@ -17,6 +16,7 @@
 </head>
 <body>
     <div class="top-container">
+        <button type="button" class="fa-solid fa-info info-toggle"></button> <!-- landing page only!!! -->
         <button type="button" data-theme-toggle class="fa-regular fa-sun theme-toggle"></button>
     </div>
     <div class="main-container">
@@ -32,5 +32,15 @@
         <p id="explanation">The environment is no one’s property to destroy. It’s everyone’s responsibility to protect.</p>
         <a href="#" class="filled-btn">Get Started <i class="fa-solid fa-arrow-right right-arrow"></i></a>
     </div>
+
+    <dialog> <!-- MODAL INFO POPUP -->
+      <button autofocus id="modal-close">x</button>
+      <p>
+          Built by Nebulous and Pandaboi
+            <!-- TODO : MORE THINGS HERE (ie socials, info, etc.) -->
+          <!-- im very tired ill do this tmrw -->
+      </p>
+    </dialog>
+
 </body>
 </html>

@@ -5,7 +5,7 @@
     height: 100vh;
     display: flex;
     justify-content: space-around;
-    align-items: center; /* This aligns items vertically to the center by default */
+    align-items: center;
 }
 
 #breadcrumbs{
@@ -87,7 +87,6 @@
     margin: 0;
     & span{
         font-size: 16px;
-
         vertical-align: top;
     }
 }
